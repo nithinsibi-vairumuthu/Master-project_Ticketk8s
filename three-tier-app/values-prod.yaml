@@ -1,0 +1,11 @@
+namespace: prod
+
+frontend:
+  replicas: 4
+
+backend:
+  replicas: 4
+
+hpa:
+  minReplicas: 4
+  maxReplicas: 10

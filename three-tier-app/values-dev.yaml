@@ -1,0 +1,7 @@
+namespace: dev
+
+frontend:
+  replicas: 2
+
+backend:
+  replicas: 2

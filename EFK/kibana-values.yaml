@@ -1,0 +1,5 @@
+kibanaConfig:
+  kibana.yml: |
+    xpack.encryptedSavedObjects.encryptionKey: "ee9e4ad18d4f51f96ea906fabd7a67f70fc3da07963131250f0b300d8e215312"
+    xpack.security.encryptionKey: "ee9e4ad18d4f51f96ea906fabd7a67f70fc3da07963131250f0b300d8e215312"
+    xpack.reporting.encryptionKey: "ee9e4ad18d4f51f96ea906fabd7a67f70fc3da07963131250f0b300d8e215312"

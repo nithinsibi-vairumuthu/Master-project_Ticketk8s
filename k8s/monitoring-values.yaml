@@ -1,0 +1,23 @@
+grafana:
+  grafana.ini:
+    smtp:
+      enabled: true
+      host: "smtp.gmail.com:587"
+      user: "nithinsibi@gmail.com"
+      from_address: "nithinsibi@gmail.com"
+      from_name: "Grafana"
+      skip_verify: true
+
+  extraEnv:
+    - name: GF_SMTP_PASSWORD
+      valueFrom:
+        secretKeyRef:
+          name: grafana-smtp-secret1
+          key: smtp-password
+
+grafana:
+  defaultDashboardsEnabled: true
+  plugins: []
+  sidecar:
+    dashboards:
+      enabled: true

@@ -27,11 +27,10 @@ module "nodegroup" {
   max_size     = 5
 }
 
-
 module "iam" {
   source = "./modules/iam"
 
-  cluster_name       = module.eks.cluster_name
-  oidc_provider_arn  = module.eks.oidc_provider_arn
-  oidc_provider_url  = data.aws_eks_cluster.this.identity[0].oidc[0].issuer
+  cluster_name      = module.eks.cluster_name
+  oidc_provider_url = module.eks.oidc_provider_url
+  oidc_provider_arn = module.eks.oidc_provider_arn
 }

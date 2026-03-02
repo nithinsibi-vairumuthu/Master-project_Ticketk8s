@@ -1,0 +1,18 @@
+backend:
+  type: es
+
+config:
+  outputs: |
+    [OUTPUT]
+        Name  es
+        Match *
+        Host  elasticsearch-master.logging.svc.cluster.local
+        Port  9200
+        HTTP_User elastic
+        HTTP_Passwd uXQ87Olc7xAzFNkN
+        tls   On
+        tls.verify Off
+        Index kubernetes-logs
+        Logstash_Format On
+        Replace_Dots On
+        Suppress_Type_Name On

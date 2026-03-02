@@ -1,7 +1,7 @@
 resource "aws_iam_policy" "alb_controller" {
   name = "${var.cluster_name}-alb-controller-policy"
 
-  policy = file("${path.module}/policies/alb-controller-policy.json")
+  policy = file("${path.module}/policies/iam_policy.json")
 }
 
 locals {

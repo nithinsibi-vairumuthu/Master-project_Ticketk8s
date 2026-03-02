@@ -1,0 +1,28 @@
+namespace: dev
+
+frontend:
+  image: nginx:1.25
+  replicas: 2
+  serviceType: ClusterIP
+  port: 80
+
+backend:
+  image: nginx:1.25
+  replicas: 2
+  port: 80
+
+db:
+  image: mysql:8.0
+  replicas: 1
+  port: 3306
+  password: rootpass
+
+ingress:
+  enabled: true
+  scheme: internet-facing
+
+hpa:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 5
+  targetCPU: 50

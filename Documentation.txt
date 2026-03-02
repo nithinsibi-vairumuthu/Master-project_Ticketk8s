@@ -1,0 +1,58 @@
+Infrastructure Overview
+Cluster Details
+
+Cluster Name: devops-eks-cluster
+
+Region: ap-south-1
+
+Provisioned using: Terraform
+
+Kubernetes Version: (mention your version)
+
+Networking
+
+Custom VPC (10.10.0.0/16)
+
+2 Public Subnets
+
+2 Private Subnets
+
+Single NAT Gateway
+
+Worker nodes in private subnets only
+
+ALB deployed in public subnets
+
+IAM & Security
+
+IAM OIDC provider configured
+
+IRSA enabled
+
+AWS Load Balancer Controller uses IAM role
+
+Cluster Autoscaler uses IAM role
+
+No static AWS credentials inside pods
+
+Kubernetes secrets encrypted using AWS KMS
+
+CloudWatch logging enabled for:
+
+API
+
+Audit
+
+Scheduler
+
+Controller Manager
+
+Add-ons Installed
+
+AWS Load Balancer Controller
+
+Cluster Autoscaler
+
+Metrics Server
+
+Helm
